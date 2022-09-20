@@ -63,7 +63,7 @@ namespace naman_and_nattu
 
             else
             {
-                Console.WriteLine("You entered invalid input");
+                Console.WriteLine("You entered invalid input :");
             }
 
 
