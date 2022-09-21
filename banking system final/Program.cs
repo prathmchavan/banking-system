@@ -66,9 +66,6 @@ namespace naman_and_nattu
                 Console.WriteLine("You entered invalid input :");
             }
 
-
-
-
         }
 
         static void deposite()
@@ -93,7 +90,9 @@ namespace naman_and_nattu
                 char y = Convert.ToChar(Console.ReadLine());
                 if (y == 'Y')
                 {
-                    Console.WriteLine("");
+                        id1 myObj = new id1();
+
+                        Console.WriteLine("");
 
                     Console.WriteLine("Wait while we process your transcation");
                     Console.WriteLine("");
@@ -110,11 +109,15 @@ namespace naman_and_nattu
                     Console.WriteLine("");
 
                     Console.WriteLine("Amount deposited -> " + dep);
+                        
+                        myObj.bal += dep;
+                        Console.WriteLine("Balance in your account :" + myObj.bal);
+                        Console.WriteLine("");
 
 
 
 
-                }
+                    }
                 else
                 {
                     Console.WriteLine("You entered invalid input please collect your cash from deposit pocket and try again to deposit your money");
