@@ -8,15 +8,16 @@ namespace naman_and_nattu
 {
     internal class Program
     {
-        private class id1
+        public class id1
         {
             int accno = 202201;
             int pass = 1234;
-            int bal = 10000;
-
+            int bal = 10000 ;
+            
+            
             static void withdrawal()
             {
-                id1 myObj = new id1();
+                id1 wthmny = new id1();
                 Console.Write("Enter the amount you want to withdrawal :  ");
                 Console.WriteLine("");
 
@@ -26,7 +27,7 @@ namespace naman_and_nattu
 
                 if (amt > 0 && amt != 0.1)
                 {
-                    if (amt > myObj.bal)
+                    if (amt > wthmny.bal)
                     {
                         Console.WriteLine("you have don't have enogh money in your account");
                     }
@@ -53,8 +54,8 @@ namespace naman_and_nattu
 
                         Console.WriteLine("Amount withdrawal ->" + amt);
 
-                        myObj.bal -= amt;
-                        Console.WriteLine("Remaining Money in your account :" + myObj.bal);
+                        wthmny.bal -= amt;
+                        Console.WriteLine("Remaining Money in your account :" + wthmny.bal);
                         Console.WriteLine("");
 
 
@@ -90,7 +91,7 @@ namespace naman_and_nattu
                     char y = Convert.ToChar(Console.ReadLine());
                     if (y == 'Y')
                     {
-                        id1 myObj = new id1();
+                        id1 depmny = new id1();
 
                         Console.WriteLine("");
 
@@ -110,8 +111,8 @@ namespace naman_and_nattu
 
                         Console.WriteLine("Amount deposited -> " + dep);
 
-                        myObj.bal += dep;
-                        Console.WriteLine("Balance in your account :" + myObj.bal);
+                            depmny.bal += dep;
+                        Console.WriteLine("Balance in your account :" + depmny.bal);
                         Console.WriteLine("");
 
 
@@ -137,8 +138,17 @@ namespace naman_and_nattu
                 }
             }
 
+            static void checkbal()
+            {
+
+                id1 chkbal = new id1();
+
+                Console.WriteLine("\n\n\tYour Account balance is  :\t"+chkbal.bal);
 
 
+            }
+
+            
 
 
 
@@ -146,13 +156,8 @@ namespace naman_and_nattu
             static void Main(string[] args)
             {
 
-                Console.WriteLine("welcome sir/mam,\n\n\t 1)lgin to your account \n\n\t 2)if you don't have account please create one");
+                Console.WriteLine("\n\n\t welcome sir/mam");
 
-                int choice = Convert.ToInt32(Console.ReadLine());
-
-                switch (choice)
-                {
-                    case 1:
 
                         int A;
 
@@ -184,6 +189,11 @@ namespace naman_and_nattu
 
                                     Console.WriteLine("\n\tpress 2 for deposit : ");
                                     Console.WriteLine("");
+                                    
+                                    Console.WriteLine("\n\tpress 3 for check balance : ");
+                                    Console.WriteLine("");
+
+
 
 
 
@@ -205,14 +215,19 @@ namespace naman_and_nattu
 
                                             break;
 
+                                        case 3:
 
+                                      checkbal();
+
+                                        
+                                            break;
 
                                     }
                                     Console.WriteLine("");
                                     Console.WriteLine("press 0 to run again the menu");
                                     A = Convert.ToInt32(Console.ReadLine());
 
-
+ 
                                 } while (A == 0);
                                 Console.ReadLine();
                             }
@@ -226,42 +241,7 @@ namespace naman_and_nattu
                             Console.WriteLine("You have entered wrong Account no");
                         }
 
-                        break;
-
-
-
-                    case 2:
-
-
-
-                        break;
-
-
-
-
-
-                }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            
 
 
 
